@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import "@/assets/css/tailwind.css";
+const config = useRuntimeConfig();
+// CLIENT ENV VARS
+const { CLIENT_VAR } = config.public;
 </script>
 
 <template>
-  <div class="w-full bg-black">Hello World</div>
+  <Navbar />
+  <div class="w-full block">{{ CLIENT_VAR }}</div>
 </template>
