@@ -2,6 +2,8 @@ import { defineNuxtConfig } from "nuxt";
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  // ssr: false,
+  modules: ["@nuxt/content"],
   runtimeConfig: {
     // The private keys which are only available within server-side
     // NUXT_SERVER_VAR in .env
