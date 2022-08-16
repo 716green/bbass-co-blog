@@ -15,7 +15,6 @@ import {
   SearchIcon,
 } from "@zhuowenli/vue-feather-icons";
 const checkActive = (path: string = "/") => {
-  console.log("CHECKING PATH");
   const currentPath = useRoute()?.path;
   const baseClass = "text-white px-3 py-2 rounded-md text-sm font-medium";
   const activeClass = "bg-gray-900 bg-gray-600 text-white";
