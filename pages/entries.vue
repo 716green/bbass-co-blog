@@ -1,17 +1,11 @@
 <script setup lang="ts">
+import convertToHTML from "markdown-to-html-converter";
 const input = ref("");
-const output = computed(() =>
-  input.value
-    .split(
-      `
-`
-    )
-    .join("<br />")
-);
+const output = computed(() => convertToHTML(input.value));
 </script>
 
 <template>
-  <span class="block" v-html="output" />
+  <span class="block prose prose-lg" v-html="output" />
 
   <textarea class="w-full" v-model="input" />
 </template>
