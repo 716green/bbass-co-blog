@@ -5,7 +5,7 @@ const output = computed(() => convertToHTML(input.value));
 </script>
 
 <template>
-  <span class="block" v-html="output" />
+  <span class="block prose prose-lg" v-html="output" />
 
   <textarea class="w-full" v-model="input" />
 </template>
